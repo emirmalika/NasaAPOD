@@ -12,6 +12,8 @@
 		8F8B4548299650A900D87F26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B4547299650A900D87F26 /* MainViewController.swift */; };
 		8F8B454D299650AF00D87F26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8B454C299650AF00D87F26 /* Assets.xcassets */; };
 		8F8B4550299650AF00D87F26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8B454E299650AF00D87F26 /* LaunchScreen.storyboard */; };
+		8F8B45582996530600D87F26 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B45572996530600D87F26 /* APIKey.swift */; };
+		8F8B455B2996553600D87F26 /* APODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B455A2996553600D87F26 /* APODModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8F8B454C299650AF00D87F26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F8B454F299650AF00D87F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F8B4551299650AF00D87F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8B45572996530600D87F26 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		8F8B455A2996553600D87F26 /* APODModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		8F8B4542299650A900D87F26 /* NASAAPOD */ = {
 			isa = PBXGroup;
 			children = (
+				8F8B455C2996553B00D87F26 /* Model */,
+				8F8B45592996530C00D87F26 /* Constants */,
 				8F8B4543299650A900D87F26 /* AppDelegate.swift */,
 				8F8B4545299650A900D87F26 /* SceneDelegate.swift */,
 				8F8B4547299650A900D87F26 /* MainViewController.swift */,
@@ -62,6 +68,22 @@
 				8F8B4551299650AF00D87F26 /* Info.plist */,
 			);
 			path = NASAAPOD;
+			sourceTree = "<group>";
+		};
+		8F8B45592996530C00D87F26 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8F8B45572996530600D87F26 /* APIKey.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8F8B455C2996553B00D87F26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F8B455A2996553600D87F26 /* APODModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +158,8 @@
 			files = (
 				8F8B4548299650A900D87F26 /* MainViewController.swift in Sources */,
 				8F8B4544299650A900D87F26 /* AppDelegate.swift in Sources */,
+				8F8B45582996530600D87F26 /* APIKey.swift in Sources */,
+				8F8B455B2996553600D87F26 /* APODModel.swift in Sources */,
 				8F8B4546299650A900D87F26 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
