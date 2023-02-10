@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct APOD {
+struct DataResponse: Codable {
     let copyright: String?
     let date: String?
     let explanation: String?
