@@ -9,8 +9,6 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var dataResponse: DataResponse? = nil
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
