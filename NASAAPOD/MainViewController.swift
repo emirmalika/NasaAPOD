@@ -9,16 +9,20 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    private var photos: APODViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
         setConstraints()
+        fetchData()
     }
-    
+
     private lazy var photo: UIImageView = {
         let imageView = UIImageView()
         
         imageView.backgroundColor = .systemGray
+        imageView.contentMode = .scaleAspectFit
         
         return imageView
     }()
@@ -26,8 +30,9 @@ class MainViewController: UIViewController {
     private lazy var titleOfPhoto: UIButton = {
         let btn = UIButton()
         
-        btn.setTitle("Hi", for: .normal)
-        btn.backgroundColor = .yellow
+        btn.setTitle("", for: .normal)
+        btn.backgroundColor = .darkGray
+        
         
         return btn
     }()
@@ -55,9 +60,7 @@ class MainViewController: UIViewController {
     }
     
     private func configureView() {
-        title = "hello"
-        
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray
         
         navigationItem.leftBarButtonItem = menu
         navigationItem.rightBarButtonItem = share
@@ -76,13 +79,41 @@ class MainViewController: UIViewController {
         stackContentView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
+            
+            
             stackContentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0.0),
             stackContentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0),
             stackContentView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0),
-            stackContentView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100.0)
+            stackContentView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0)
         ])
-        
-       
     }
     
+    
+    private func fetchData() {
+        NetworkManager.shared.getAPOD { [weak self] result in
+            switch result {
+            case .success(let photos):
+                let urlString = photos.hdurl
+                guard let url = URL(string: urlString ?? "") else { return }
+                
+                URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+                    guard let data = data, error == nil else {
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self?.titleOfPhoto.setTitle(photos.title, for: .normal)
+                        self?.photo.image = UIImage(data: data)
+                        self?.navigationItem.title = photos.date
+                    }
+                    
+                }.resume()
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+    }
 }
+    
+

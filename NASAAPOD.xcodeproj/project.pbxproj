@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F70F871299BE3D0005EE62F /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70F870299BE3D0005EE62F /* GalleryCollectionViewController.swift */; };
+		8F70F874299CEC7C005EE62F /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70F873299CEC7C005EE62F /* ShadowImageView.swift */; };
 		8F8B4544299650A900D87F26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B4543299650A900D87F26 /* AppDelegate.swift */; };
 		8F8B4546299650A900D87F26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B4545299650A900D87F26 /* SceneDelegate.swift */; };
 		8F8B4548299650A900D87F26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B4547299650A900D87F26 /* MainViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F70F870299BE3D0005EE62F /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
+		8F70F873299CEC7C005EE62F /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
 		8F8B4540299650A900D87F26 /* NASAAPOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAAPOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8B4543299650A900D87F26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F8B4545299650A900D87F26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F70F872299CEC2D005EE62F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F70F873299CEC7C005EE62F /* ShadowImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8F8B4537299650A900D87F26 = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +74,14 @@
 		8F8B4542299650A900D87F26 /* NASAAPOD */ = {
 			isa = PBXGroup;
 			children = (
+				8F70F872299CEC2D005EE62F /* Views */,
 				8F8B455D2996575600D87F26 /* Network Service */,
 				8F8B455C2996553B00D87F26 /* Model */,
 				8F8B45592996530C00D87F26 /* Constants */,
 				8F8B4543299650A900D87F26 /* AppDelegate.swift */,
 				8F8B4545299650A900D87F26 /* SceneDelegate.swift */,
 				8F8B4547299650A900D87F26 /* MainViewController.swift */,
+				8F70F870299BE3D0005EE62F /* GalleryCollectionViewController.swift */,
 				8F8B454C299650AF00D87F26 /* Assets.xcassets */,
 				8F8B454E299650AF00D87F26 /* LaunchScreen.storyboard */,
 				8F8B4551299650AF00D87F26 /* Info.plist */,
@@ -173,6 +187,8 @@
 				8FF43C10299B75BC00C8619E /* APODViewModel.swift in Sources */,
 				8F8B455F2996577500D87F26 /* NetworkManager.swift in Sources */,
 				8F8B4548299650A900D87F26 /* MainViewController.swift in Sources */,
+				8F70F874299CEC7C005EE62F /* ShadowImageView.swift in Sources */,
+				8F70F871299BE3D0005EE62F /* GalleryCollectionViewController.swift in Sources */,
 				8F8B4544299650A900D87F26 /* AppDelegate.swift in Sources */,
 				8F8B45582996530600D87F26 /* APIKey.swift in Sources */,
 				8F8B455B2996553600D87F26 /* APODModel.swift in Sources */,

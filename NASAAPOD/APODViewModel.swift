@@ -8,12 +8,13 @@
 import Foundation
 
 final class APODViewModel {
+    
     let copyright: String
     let date: String
     let explanation: String
-    let hdurl: URL?
-    let title: String
-    var dataResponse: DataResponse? = nil
+    var hdurl: URL?
+    var title: String
+    var imageData: Data? = nil
     
     init(
         copyright: String,
