@@ -15,6 +15,8 @@
 		8F8B455F2996577500D87F26 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B455E2996577500D87F26 /* NetworkManager.swift */; };
 		8FD23B5F299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD23B5E299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift */; };
 		8FD23B61299E6A3200E9ACF6 /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD23B60299E6A3200E9ACF6 /* GalleryCollectionViewController.swift */; };
+		8FD23B63299FA8A800E9ACF6 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD23B62299FA8A800E9ACF6 /* PhotoDetailsViewController.swift */; };
+		8FD23B66299FFF6900E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8FD23B65299FFF6800E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 */; };
 		8FF43C10299B75BC00C8619E /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF43C0F299B75BB00C8619E /* APODViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		8F8B455E2996577500D87F26 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8FD23B5E299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		8FD23B60299E6A3200E9ACF6 /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
+		8FD23B62299FA8A800E9ACF6 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		8FD23B65299FFF6800E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sasha Malkovich - Yoga Power.mp3"; sourceTree = "<group>"; };
 		8FF43C0F299B75BB00C8619E /* APODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +54,7 @@
 			children = (
 				8FD23B5E299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift */,
 				8FD23B60299E6A3200E9ACF6 /* GalleryCollectionViewController.swift */,
+				8FD23B62299FA8A800E9ACF6 /* PhotoDetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -84,6 +89,8 @@
 				8F8B454C299650AF00D87F26 /* Assets.xcassets */,
 				8F8B454E299650AF00D87F26 /* LaunchScreen.storyboard */,
 				8FF43C0F299B75BB00C8619E /* APODViewModel.swift */,
+				8FD23B64299FFF5000E9ACF6 /* Sounds */,
+				8FD23B65299FFF6800E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 */,
 			);
 			path = NASAAPOD;
 			sourceTree = "<group>";
@@ -110,6 +117,13 @@
 				8F8B455E2996577500D87F26 /* NetworkManager.swift */,
 			);
 			path = "Network Service";
+			sourceTree = "<group>";
+		};
+		8FD23B64299FFF5000E9ACF6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD23B66299FFF6900E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +201,7 @@
 				8F8B455F2996577500D87F26 /* NetworkManager.swift in Sources */,
 				8F8B4548299650A900D87F26 /* MainViewController.swift in Sources */,
 				8F8B4544299650A900D87F26 /* AppDelegate.swift in Sources */,
+				8FD23B63299FA8A800E9ACF6 /* PhotoDetailsViewController.swift in Sources */,
 				8F8B45582996530600D87F26 /* APIKey.swift in Sources */,
 				8F8B455B2996553600D87F26 /* APODModel.swift in Sources */,
 				8F8B4546299650A900D87F26 /* SceneDelegate.swift in Sources */,

@@ -13,9 +13,6 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     
     private lazy var photosImage: UIImageView = {
         let view = UIImageView()
-    
-        view.layer.cornerRadius = 20
-       
         
         return view
     }()
@@ -24,7 +21,6 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         let lbl = UILabel()
         
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.numberOfLines = 0
         lbl.textAlignment = .center
         lbl.textColor = UIColor((#colorLiteral(red: 0.9333333333, green: 0.9137254902, blue: 0.8549019608, alpha: 1)))
         
@@ -68,15 +64,13 @@ class PhotosCollectionViewCell: UICollectionViewCell {
             photosImage.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             photosImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             photosImage.trailingAnchor.constraint(equalTo: trailingAnchor),
-            photosImage.heightAnchor.constraint(equalToConstant: 220)
-
+            photosImage.heightAnchor.constraint(equalToConstant: contentView.frame.height - 100)
         ])
         
         NSLayoutConstraint.activate([
             titleOfPhoto.topAnchor.constraint(equalTo: photosImage.bottomAnchor, constant: 10),
             titleOfPhoto.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleOfPhoto.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-//            titleOfPhoto.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([

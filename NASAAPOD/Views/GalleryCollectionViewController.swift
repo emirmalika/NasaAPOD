@@ -10,7 +10,7 @@ import UIKit
 class GalleryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private var viewModels = [APODViewModel]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +43,7 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
                 DispatchQueue.main.async {
                     self?.collectionView.reloadData()
                 }
+                self?.viewModels.reverse()
             case .failure(let error):
                 print(error)
             }
@@ -51,7 +52,7 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+        
         return viewModels.count
     }
 
@@ -60,14 +61,27 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
     
         cell.backgroundColor = UIColor((#colorLiteral(red: 0.3764705882, green: 0.5882352941, blue: 0.7058823529, alpha: 1)))
         cell.layer.cornerRadius = 20
-        cell.configure(with: viewModels[indexPath.item])
         
-    
+        cell.configure(with: viewModels[indexPath.item])
+       
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let photoDetailsVC = PhotoDetailsViewController()
+        photoDetailsVC.detailItem = viewModels[indexPath.item]
+        photoDetailsVC.navigationController?.title = navigationController?.title
+        
+        navigationController?.pushViewController(photoDetailsVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width - 100, height: view.frame.width - 100)
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
 }
