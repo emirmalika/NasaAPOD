@@ -11,9 +11,9 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     
-    private let urlString = "https://api.nasa.gov/planetary/apod?api_key=\(APIKey.key)"
+    private let urlString = "https://api.nasa.gov/planetary/apod?start_date=2023-02-10&api_key=\(APIKey.key)"
     
-    func getAPOD(completion: @escaping (Result<DataResponse, Error>) -> Void) {
+    func getAPOD(completion: @escaping (Result<Photo, Error>) -> Void) {
         guard let url = URL(string: urlString) else {
             return
         }
@@ -23,7 +23,7 @@ final class NetworkManager {
             }
             else if let data = data {
                 do {
-                    let result = try JSONDecoder().decode(DataResponse.self, from: data)
+                    let result = try JSONDecoder().decode(Photo.self, from: data)
                     completion(.success(result))
                 }
                 catch {

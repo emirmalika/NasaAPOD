@@ -18,8 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        let vc = MainViewController()
-        window?.rootViewController = UINavigationController(rootViewController: vc)
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        let customCollectionViewController = GalleryViewController(collectionViewLayout: flowLayout)
+        
+        window?.rootViewController = UINavigationController(rootViewController: customCollectionViewController)
         window?.makeKeyAndVisible()
         
     }

@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct DataResponse: Codable {
+typealias Photo = [Photos]
+
+struct Photos: Codable {
     let copyright: String?
     let date: String?
     let explanation: String?
