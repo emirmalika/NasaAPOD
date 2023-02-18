@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		8F8B4544299650A900D87F26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B4543299650A900D87F26 /* AppDelegate.swift */; };
 		8F8B4546299650A900D87F26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B4545299650A900D87F26 /* SceneDelegate.swift */; };
-		8F8B4548299650A900D87F26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B4547299650A900D87F26 /* MainViewController.swift */; };
 		8F8B45582996530600D87F26 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B45572996530600D87F26 /* APIKey.swift */; };
 		8F8B455B2996553600D87F26 /* APODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B455A2996553600D87F26 /* APODModel.swift */; };
 		8F8B455F2996577500D87F26 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B455E2996577500D87F26 /* NetworkManager.swift */; };
-		8FD23B5F299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD23B5E299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift */; };
+		8FD23B5F299E69FE00E9ACF6 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD23B5E299E69FE00E9ACF6 /* GalleryCollectionViewCell.swift */; };
 		8FD23B61299E6A3200E9ACF6 /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD23B60299E6A3200E9ACF6 /* GalleryCollectionViewController.swift */; };
-		8FD23B63299FA8A800E9ACF6 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD23B62299FA8A800E9ACF6 /* PhotoDetailsViewController.swift */; };
-		8FD23B66299FFF6900E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8FD23B65299FFF6800E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 */; };
+		8FD23B63299FA8A800E9ACF6 /* GalleryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD23B62299FA8A800E9ACF6 /* GalleryDetailsViewController.swift */; };
 		8FF43C10299B75BC00C8619E /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF43C0F299B75BB00C8619E /* APODViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,17 +22,15 @@
 		8F8B4540299650A900D87F26 /* NASAAPOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAAPOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8B4543299650A900D87F26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F8B4545299650A900D87F26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8F8B4547299650A900D87F26 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8F8B454C299650AF00D87F26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F8B454F299650AF00D87F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F8B4551299650AF00D87F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F8B45572996530600D87F26 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		8F8B455A2996553600D87F26 /* APODModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODModel.swift; sourceTree = "<group>"; };
 		8F8B455E2996577500D87F26 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		8FD23B5E299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		8FD23B5E299E69FE00E9ACF6 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8FD23B60299E6A3200E9ACF6 /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
-		8FD23B62299FA8A800E9ACF6 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
-		8FD23B65299FFF6800E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sasha Malkovich - Yoga Power.mp3"; sourceTree = "<group>"; };
+		8FD23B62299FA8A800E9ACF6 /* GalleryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailsViewController.swift; sourceTree = "<group>"; };
 		8FF43C0F299B75BB00C8619E /* APODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,16 +45,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8F70F872299CEC2D005EE62F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8FD23B5E299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift */,
-				8FD23B60299E6A3200E9ACF6 /* GalleryCollectionViewController.swift */,
-				8FD23B62299FA8A800E9ACF6 /* PhotoDetailsViewController.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		8F8B4537299650A900D87F26 = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				8F8B4551299650AF00D87F26 /* Info.plist */,
-				8F8B455C2996553B00D87F26 /* Model */,
-				8F70F872299CEC2D005EE62F /* Views */,
-				8FD23B6729A0026200E9ACF6 /* ViewModel */,
-				8F8B455D2996575600D87F26 /* Network Service */,
-				8F8B45592996530C00D87F26 /* Constants */,
-				8FD23B6829A0029C00E9ACF6 /* Supporting Files */,
-				8FD23B64299FFF5000E9ACF6 /* Sounds */,
+				8FDF2A7229A10EC3008428DE /* Application Layer */,
+				8FDF2A7329A10ECD008428DE /* Core Layer */,
+				8FDF2A7429A10ED6008428DE /* Presentation Layer */,
+				8FDF2A7529A10EE4008428DE /* Business Logic Layer */,
 			);
 			path = NASAAPOD;
 			sourceTree = "<group>";
@@ -114,15 +97,78 @@
 			path = "Network Service";
 			sourceTree = "<group>";
 		};
-		8FD23B64299FFF5000E9ACF6 /* Sounds */ = {
+		8FDF2A7229A10EC3008428DE /* Application Layer */ = {
 			isa = PBXGroup;
 			children = (
-				8FD23B65299FFF6800E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 */,
+				8F8B4543299650A900D87F26 /* AppDelegate.swift */,
+				8F8B4545299650A900D87F26 /* SceneDelegate.swift */,
+				8F8B454E299650AF00D87F26 /* LaunchScreen.storyboard */,
 			);
-			path = Sounds;
+			path = "Application Layer";
 			sourceTree = "<group>";
 		};
-		8FD23B6729A0026200E9ACF6 /* ViewModel */ = {
+		8FDF2A7329A10ECD008428DE /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+				8F8B455D2996575600D87F26 /* Network Service */,
+				8F8B45592996530C00D87F26 /* Constants */,
+				8FDF2A7629A10F7A008428DE /* Resources */,
+			);
+			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		8FDF2A7429A10ED6008428DE /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				8FDF2A7829A11057008428DE /* Gallery */,
+				8FDF2A7729A11001008428DE /* GalleryDetail */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		8FDF2A7529A10EE4008428DE /* Business Logic Layer */ = {
+			isa = PBXGroup;
+			children = (
+				8F8B455C2996553B00D87F26 /* Model */,
+			);
+			path = "Business Logic Layer";
+			sourceTree = "<group>";
+		};
+		8FDF2A7629A10F7A008428DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F8B454C299650AF00D87F26 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8FDF2A7729A11001008428DE /* GalleryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				8FDF2A7929A1106F008428DE /* ViewController */,
+				8FD23B62299FA8A800E9ACF6 /* GalleryDetailsViewController.swift */,
+			);
+			path = GalleryDetail;
+			sourceTree = "<group>";
+		};
+		8FDF2A7829A11057008428DE /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				8FDF2A7A29A110BC008428DE /* ViewModel */,
+				8FDF2A7C29A11124008428DE /* ViewController */,
+				8FDF2A7B29A11113008428DE /* View */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		8FDF2A7929A1106F008428DE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8FDF2A7A29A110BC008428DE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				8FF43C0F299B75BB00C8619E /* APODViewModel.swift */,
@@ -130,16 +176,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		8FD23B6829A0029C00E9ACF6 /* Supporting Files */ = {
+		8FDF2A7B29A11113008428DE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8F8B4543299650A900D87F26 /* AppDelegate.swift */,
-				8F8B4545299650A900D87F26 /* SceneDelegate.swift */,
-				8F8B4547299650A900D87F26 /* MainViewController.swift */,
-				8F8B454C299650AF00D87F26 /* Assets.xcassets */,
-				8F8B454E299650AF00D87F26 /* LaunchScreen.storyboard */,
+				8FD23B5E299E69FE00E9ACF6 /* GalleryCollectionViewCell.swift */,
 			);
-			path = "Supporting Files";
+			path = View;
+			sourceTree = "<group>";
+		};
+		8FDF2A7C29A11124008428DE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8FD23B60299E6A3200E9ACF6 /* GalleryCollectionViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +250,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FD23B66299FFF6900E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,11 +262,10 @@
 			files = (
 				8FD23B61299E6A3200E9ACF6 /* GalleryCollectionViewController.swift in Sources */,
 				8FF43C10299B75BC00C8619E /* APODViewModel.swift in Sources */,
-				8FD23B5F299E69FE00E9ACF6 /* PhotosCollectionViewCell.swift in Sources */,
+				8FD23B5F299E69FE00E9ACF6 /* GalleryCollectionViewCell.swift in Sources */,
 				8F8B455F2996577500D87F26 /* NetworkManager.swift in Sources */,
-				8F8B4548299650A900D87F26 /* MainViewController.swift in Sources */,
 				8F8B4544299650A900D87F26 /* AppDelegate.swift in Sources */,
-				8FD23B63299FA8A800E9ACF6 /* PhotoDetailsViewController.swift in Sources */,
+				8FD23B63299FA8A800E9ACF6 /* GalleryDetailsViewController.swift in Sources */,
 				8F8B45582996530600D87F26 /* APIKey.swift in Sources */,
 				8F8B455B2996553600D87F26 /* APODModel.swift in Sources */,
 				8F8B4546299650A900D87F26 /* SceneDelegate.swift in Sources */,
@@ -362,10 +410,13 @@
 				DEVELOPMENT_TEAM = QUCJP87L3T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NASAAPOD/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,7 +426,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -389,10 +440,13 @@
 				DEVELOPMENT_TEAM = QUCJP87L3T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NASAAPOD/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +456,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
