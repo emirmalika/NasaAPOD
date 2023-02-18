@@ -10,7 +10,7 @@ import UIKit
 class PhotoDetailsViewController: UIViewController {
     
     var detailItem: APODViewModel?
-    
+   
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
         
@@ -24,7 +24,7 @@ class PhotoDetailsViewController: UIViewController {
         let img = UIImageView()
         
         img.layer.masksToBounds = false
-    
+       
         return img
     }()
     
@@ -57,6 +57,18 @@ class PhotoDetailsViewController: UIViewController {
         return label
     }()
     
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        
+        activityIndicator.style = .large
+        activityIndicator.color = UIColor((#colorLiteral(red: 0.7411764706, green: 0.8039215686, blue: 0.8392156863, alpha: 1)))
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        
+        return activityIndicator
+    }()
+    
     private lazy var stackContentView: UIStackView = {
         let sv = UIStackView(arrangedSubviews: [
             dateLabel,
@@ -73,29 +85,16 @@ class PhotoDetailsViewController: UIViewController {
         return sv
     }()
     
-    private func setConstraints() {
-        [dateLabel, imageView, titleOfPhoto, descrOfPhoto, copyright].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        }
-        
-        view.addSubview(stackContentView)
-        
-        stackContentView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            imageView.heightAnchor.constraint(equalToConstant: 300),
-            
-            stackContentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16.0),
-            stackContentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0),
-            stackContentView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.0)
-        ])
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor((#colorLiteral(red: 0.5764705882, green: 0.7490196078, blue: 0.8117647059, alpha: 1)))
         configureDate()
         setConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     private func configureDate() {
@@ -115,6 +114,7 @@ class PhotoDetailsViewController: UIViewController {
                 guard let data = data, error == nil else { return }
                 DispatchQueue.main.async {
                     self.imageView.image = UIImage(data: data)
+                    self.activityIndicator.stopAnimating()
                 }
             }.resume()
         }
@@ -123,5 +123,29 @@ class PhotoDetailsViewController: UIViewController {
         titleOfPhoto.text = title
         descrOfPhoto.text = descr
         copyright.text = "©: \(copy)"
-    }   
+    }
+    
+    private func setConstraints() {
+        [dateLabel, imageView, titleOfPhoto, descrOfPhoto, copyright].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        view.addSubview(stackContentView)
+        view.addSubview(activityIndicator)
+        
+        stackContentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            imageView.heightAnchor.constraint(equalToConstant: 300),
+            
+            stackContentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16.0),
+            stackContentView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0),
+            stackContentView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.0),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
+        ])
+    }
+    
+    
 }

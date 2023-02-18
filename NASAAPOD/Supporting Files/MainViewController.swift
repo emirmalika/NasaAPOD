@@ -15,7 +15,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         configureView()
         setConstraints()
-//        fetchData()
     }
 
     private lazy var photo: UIImageView = {

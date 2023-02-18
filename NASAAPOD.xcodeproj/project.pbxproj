@@ -79,18 +79,13 @@
 			isa = PBXGroup;
 			children = (
 				8F8B4551299650AF00D87F26 /* Info.plist */,
-				8F70F872299CEC2D005EE62F /* Views */,
-				8F8B455D2996575600D87F26 /* Network Service */,
 				8F8B455C2996553B00D87F26 /* Model */,
+				8F70F872299CEC2D005EE62F /* Views */,
+				8FD23B6729A0026200E9ACF6 /* ViewModel */,
+				8F8B455D2996575600D87F26 /* Network Service */,
 				8F8B45592996530C00D87F26 /* Constants */,
-				8F8B4543299650A900D87F26 /* AppDelegate.swift */,
-				8F8B4545299650A900D87F26 /* SceneDelegate.swift */,
-				8F8B4547299650A900D87F26 /* MainViewController.swift */,
-				8F8B454C299650AF00D87F26 /* Assets.xcassets */,
-				8F8B454E299650AF00D87F26 /* LaunchScreen.storyboard */,
-				8FF43C0F299B75BB00C8619E /* APODViewModel.swift */,
+				8FD23B6829A0029C00E9ACF6 /* Supporting Files */,
 				8FD23B64299FFF5000E9ACF6 /* Sounds */,
-				8FD23B65299FFF6800E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 */,
 			);
 			path = NASAAPOD;
 			sourceTree = "<group>";
@@ -122,8 +117,29 @@
 		8FD23B64299FFF5000E9ACF6 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				8FD23B65299FFF6800E9ACF6 /* Sasha Malkovich - Yoga Power.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		8FD23B6729A0026200E9ACF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8FF43C0F299B75BB00C8619E /* APODViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8FD23B6829A0029C00E9ACF6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F8B4543299650A900D87F26 /* AppDelegate.swift */,
+				8F8B4545299650A900D87F26 /* SceneDelegate.swift */,
+				8F8B4547299650A900D87F26 /* MainViewController.swift */,
+				8F8B454C299650AF00D87F26 /* Assets.xcassets */,
+				8F8B454E299650AF00D87F26 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

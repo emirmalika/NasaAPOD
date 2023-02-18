@@ -37,9 +37,22 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         return lbl
     }()
     
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        
+        activityIndicator.style = .large
+        activityIndicator.color = UIColor((#colorLiteral(red: 0.7411764706, green: 0.8039215686, blue: 0.8392156863, alpha: 1)))
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        
+        return activityIndicator
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,6 +63,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(photosImage)
         contentView.addSubview(titleOfPhoto)
         contentView.addSubview(dateOfPhoto)
+        contentView.addSubview(activityIndicator)
     }
     
     override func layoutSubviews() {
@@ -64,27 +78,26 @@ class PhotosCollectionViewCell: UICollectionViewCell {
             photosImage.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             photosImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             photosImage.trailingAnchor.constraint(equalTo: trailingAnchor),
-            photosImage.heightAnchor.constraint(equalToConstant: contentView.frame.height - 100)
-        ])
-        
-        NSLayoutConstraint.activate([
+            photosImage.heightAnchor.constraint(equalToConstant: contentView.frame.height - 100),
+    
             titleOfPhoto.topAnchor.constraint(equalTo: photosImage.bottomAnchor, constant: 10),
             titleOfPhoto.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleOfPhoto.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-        ])
-        
-        NSLayoutConstraint.activate([
+       
             dateOfPhoto.topAnchor.constraint(equalTo: titleOfPhoto.bottomAnchor, constant: 8),
             dateOfPhoto.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             dateOfPhoto.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            dateOfPhoto.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+            dateOfPhoto.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
     
     func configure(with viewModel: APODViewModel) {
         titleOfPhoto.text = viewModel.title
         dateOfPhoto.text = viewModel.date
-//
+
         if let data = viewModel.imageData {
             photosImage.image = UIImage(data: data)
         }
@@ -93,8 +106,11 @@ class PhotosCollectionViewCell: UICollectionViewCell {
                 guard let data = data, error == nil else { return }
                 DispatchQueue.main.async {
                     self.photosImage.image = UIImage(data: data)
+                    self.activityIndicator.stopAnimating()
                 }
             }.resume()
         }
     }
 }
+
+

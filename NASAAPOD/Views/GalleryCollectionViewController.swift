@@ -6,18 +6,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GalleryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
+
     private var viewModels = [APODViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         configureView()
         fetchData()
     }
-
+    
     private func configureView() {
         title = "Gallery of APOD"
         
@@ -52,7 +53,6 @@ class GalleryViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return viewModels.count
     }
 
