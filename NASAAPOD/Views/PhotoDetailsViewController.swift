@@ -88,14 +88,28 @@ class PhotoDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor((#colorLiteral(red: 0.5764705882, green: 0.7490196078, blue: 0.8117647059, alpha: 1)))
+        configureView()
         configureDate()
         setConstraints()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    private func configureView() {
+        view.backgroundColor = UIColor((#colorLiteral(red: 0.5764705882, green: 0.7490196078, blue: 0.8117647059, alpha: 1)))
+        let actionBtn = UIBarButtonItem(image: UIImage(systemName: "ellipsis"), style: .plain, target: self, action: #selector(shareBtnTapped))
+        actionBtn.tintColor = .black
         
+        navigationItem.rightBarButtonItem = actionBtn
     }
+    
+    @objc func shareBtnTapped() {
+        guard let photoURL = detailItem?.hdurl else { return }
+        guard let photoData = try? Data(contentsOf: photoURL) else { return }
+        let photo: [Any] = [UIImage(data: photoData) as Any]
+        let shareController = UIActivityViewController(activityItems: photo, applicationActivities: nil)
+        
+        present(shareController, animated: true, completion: nil)
+    }
+    
     
     private func configureDate() {
         guard let date =  detailItem?.date,
