@@ -128,10 +128,10 @@ final class GalleryDetailsViewController: UIViewController {
             return
         }
 
-        if let data = detailItem?.imageData {
-            imageView.image = UIImage(data: data)
-        }
-        else if let url = detailItem?.hdurl {
+//        if let data = detailItem?.imageData {
+//            imageView.image = UIImage(data: data)
+//        }
+        if let url = detailItem?.hdurl {
             URLSession.shared.dataTask(with: url) { data, _, error in
                 guard let data = data, error == nil else { return }
                 DispatchQueue.main.async {

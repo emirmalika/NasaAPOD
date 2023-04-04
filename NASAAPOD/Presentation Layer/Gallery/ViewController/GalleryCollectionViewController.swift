@@ -13,12 +13,11 @@ final class GalleryViewController: UICollectionViewController, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureView()
+        style()
         fetchData()
     }
     
-    private func configureView() {
+    private func style() {
         title = "Gallery of APOD"
         collectionView.backgroundColor = UIColor((#colorLiteral(red: 0.5764705882, green: 0.7490196078, blue: 0.8117647059, alpha: 1)))
         collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
@@ -49,7 +48,6 @@ final class GalleryViewController: UICollectionViewController, UICollectionViewD
 }
 
 extension GalleryViewController {
-        
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModels.count
     }

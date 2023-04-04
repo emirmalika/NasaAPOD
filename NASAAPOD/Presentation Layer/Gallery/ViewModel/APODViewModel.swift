@@ -12,9 +12,8 @@ final class APODViewModel {
     let copyright: String
     let date: String
     let explanation: String
-    var hdurl: URL?
-    var title: String
-    var imageData: Data? = nil
+    let hdurl: URL?
+    let title: String
     
     init(
         copyright: String,

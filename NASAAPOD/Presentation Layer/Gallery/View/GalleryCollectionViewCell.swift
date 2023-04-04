@@ -13,62 +13,54 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
     
     private lazy var imageView: UIImageView = {
         let view = UIImageView()
-        
         return view
     }()
     
     private lazy var titleOfImage: UILabel = {
         let lbl = UILabel()
-        
         lbl.textAlignment = .center
         lbl.textColor = UIColor((#colorLiteral(red: 0.9333333333, green: 0.9137254902, blue: 0.8549019608, alpha: 1)))
-        
         return lbl
     }()
     
     private lazy var dateOfImage: UILabel = {
         let lbl = UILabel()
-        
         lbl.textAlignment = .center
         lbl.textColor = UIColor((#colorLiteral(red: 0.7411764706, green: 0.8039215686, blue: 0.8392156863, alpha: 1)))
-        
         return lbl
     }()
     
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView()
-        
         activityIndicator.style = .large
         activityIndicator.color = UIColor((#colorLiteral(red: 0.7411764706, green: 0.8039215686, blue: 0.8392156863, alpha: 1)))
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
-        
         return activityIndicator
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
-        
-    }
-    
-    private func setupView() {
-        contentView.addSubview(imageView)
-        contentView.addSubview(titleOfImage)
-        contentView.addSubview(dateOfImage)
-        contentView.addSubview(activityIndicator)
+        style()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setConstraints()
+    private func style() {
+        contentView.addSubview(imageView)
+        contentView.addSubview(titleOfImage)
+        contentView.addSubview(dateOfImage)
+        contentView.addSubview(activityIndicator)
     }
     
-    private func setConstraints() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layout()
+    }
+    
+    private func layout() {
         [imageView, titleOfImage, dateOfImage, activityIndicator].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -96,11 +88,7 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
     func configure(with viewModel: APODViewModel) {
         titleOfImage.text = viewModel.title
         dateOfImage.text = viewModel.date
-
-        if let data = viewModel.imageData {
-            imageView.image = UIImage(data: data)
-        }
-        else if let url = viewModel.hdurl {
+        if let url = viewModel.hdurl {
             URLSession.shared.dataTask(with: url) { data, _, error in
                 guard let data = data, error == nil else { return }
                 DispatchQueue.main.async {
